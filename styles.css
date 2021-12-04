@@ -1,0 +1,164 @@
+:root {
+    --bg_color_nav_btn: #02a0da;
+    --txt_color_nav_btn: #000100;
+    --bg_nav_menu_div: #03bcff;
+}
+
+*,
+:after,
+:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head_container {
+    height: 50px;
+    background-color: var(--bg_nav_menu_div);
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+}
+
+.subMenu .infoContainer {
+    top: 0;
+}
+
+.infoContainer {
+    padding-left: 0.5rem;
+    height: 50px;
+    width: 100%;
+    font-size: 1.25rem;
+    background-color: var(--bg_nav_menu_div);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    line-height: 50px;
+    align-content: center;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+}
+
+.menu_container {
+    left: 0;
+    width: 20%;
+}
+
+.menu_nav,
+.subMenu {
+    position: absolute;
+    background-color: var(--bg_nav_menu_div);
+    width: 20%;
+    left: -100%;
+    transition: 0.75s;
+    height: calc(100vh - 50px);
+    border-right: 1px solid rgb(0, 0, 0);
+}
+
+.subMenu {
+    height: 100vh;
+    top: 0;
+}
+
+.subMenu_backBtn {
+    width: 50px;
+    float: right;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.menu_nav {
+    left: 0;
+}
+
+.subMenu.active_subMenu {
+    left: 0px;
+}
+
+.menu_container>div>button {
+    padding: 5px 10px;
+    width: 100%;
+    background-color: var(--bg_color_nav_btn);
+    color: var(--txt_color_nav_btn);
+    border: 2px solid grey;
+    border-radius: 20px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.menu_container>div>button:active {
+    filter: brightness(0.9);
+}
+
+.content_div {
+    height: calc(100vh);
+    background-color: grey;
+    flex: 80%;
+}
+
+.toogleNavBar {
+    display: none;
+}
+
+.pageInfo_sum {
+    line-height: 50px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.homeIcon_html_dash {
+    cursor: pointer;
+    flex-grow: 2;
+    text-align: center;
+}
+
+.logotBtn_ {
+    width: 50px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.scroll {
+    overflow-y: auto;
+    height: calc(100vh - 50px);
+    padding: 0.5rem;
+    padding-top: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .menu_container {
+        left: -100%;
+        position: absolute;
+        transition: 1s;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .content_div {
+        width: 100%;
+    }
+    .toogleNavBar {
+        display: block;
+        line-height: 50px;
+        width: 50px;
+        font-size: 3rem;
+        padding-left: 1rem;
+        cursor: pointer;
+        color: #ffffff99;
+    }
+    .menu_container.mobile_menu_active {
+        left: 0;
+        position: absolute;
+        width: 80%;
+    }
+    .mobile_menu_active>div {
+        width: 100%;
+    }
+    .appPageInfo_home {
+        padding-right: 0;
+        font-size: 1.25rem;
+    }
+}
