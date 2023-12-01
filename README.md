@@ -1,5 +1,5 @@
 # nav-bar
-
+# Demo https://dibashsapkota.github.io/nav-bar/
 Simple navbar for html projects
 this project uses jquery
 
